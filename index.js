@@ -78,10 +78,12 @@ const titles = [
 //"--- wrote --- in ---"
 
 //Sort books from oldest to most recent
-
+//document.getElementById("chrono").books = books[publishDate];
 //sort books alphabetically
-
+const alphabeticaltitles = titles.sort();
+console.log(alphabeticaltitles);
 //Find who wrote War and Peace
+document.getElementById("warnpeace") === books[authorFirst];
 
 //how many books were written before 1900?
 
