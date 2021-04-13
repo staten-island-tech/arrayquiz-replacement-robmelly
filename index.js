@@ -49,6 +49,7 @@ const books = [
   },
   {
     name: "Great Expectations",
+
     authorFirst: "Charles",
     authorLast: "Dickens",
     publishDate: 1861,
@@ -78,7 +79,7 @@ const titles = [
 //"--- wrote --- in ---"
 
 //Sort books from oldest to most recent
-//document.getElementById("chrono").books = books[publishDate];
+document.getElementById("chrono") === books[publishDate];
 //sort books alphabetically
 const alphabeticaltitles = titles.sort();
 console.log(alphabeticaltitles);
