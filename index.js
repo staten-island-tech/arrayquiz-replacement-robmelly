@@ -49,7 +49,6 @@ const books = [
   },
   {
     name: "Great Expectations",
-
     authorFirst: "Charles",
     authorLast: "Dickens",
     publishDate: 1861,
@@ -79,15 +78,49 @@ const titles = [
 //"--- wrote --- in ---"
 
 //Sort books from oldest to most recent
-document.getElementById("chrono") === books[publishDate];
+
+//uncomment below for code, code messes up some of the other questions, comment again once finish with question
+
+// const sortByDate = (books) => {
+//   const sorter = (a, b) => {
+//     return (
+//       new Date(a.publishDate).getTime() - new Date(b.publishDate).getTime()
+//     );
+//   };
+//   books.sort(sorter);
+//   return books;
+// };
+// console.log(sortByDate(books));
+
 //sort books alphabetically
+
 const alphabeticaltitles = titles.sort();
 console.log(alphabeticaltitles);
+
 //Find who wrote War and Peace
-document.getElementById("warnpeace") === books[authorFirst];
+
+const wnp1 = books[5]["authorFirst"];
+const wnp2 = books[5]["authorLast"];
+console.log(wnp1, wnp2);
 
 //how many books were written before 1900?
+function before1900({ publishDate: value }) {
+  if (value < 1900) return "1 +";
+  else return "0";
+}
+
+const cool = books.map(before1900);
+console.log(cool);
 
 //was there at least one book published within the last 100 years?
+function publish100within({ publishDate: value }) {
+  if (value > 1921) return console.log("yes");
+}
 
+books.map(publish100within);
 //was every book published within the last 100 years?
+function publish100years({ publishDate: value }) {
+  if (value < 1921) return console.log("no");
+}
+
+books.map(publish100years);
